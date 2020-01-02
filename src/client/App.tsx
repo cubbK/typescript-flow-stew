@@ -6,10 +6,11 @@ import { About } from './components/About';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UsersList } from './components/UsersList';
+import { Card } from './Card';
 
 const useStyles = makeStyles(() => ({
   main: {
-    margin: 8
+    margin: 8,
   },
 }));
 
@@ -26,6 +27,7 @@ export const App = () => {
           <Route path='/about' component={About} />
           <Route path='/users-list' component={UsersList} />
         </Switch>
+        <Card />
       </main>
     </BrowserRouter>
   );

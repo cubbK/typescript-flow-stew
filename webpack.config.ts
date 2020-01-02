@@ -43,6 +43,11 @@ const config: Configuration = {
         exclude: [/node_modules/, nodeModulesPath],
       },
       {
+        test: /\.js?$/,
+        loaders: ['babel-loader'],
+        exclude: [/node_modules/, nodeModulesPath],
+      },
+      {
         test: /\.css$/,
         use: [
           {
@@ -74,11 +79,11 @@ const config: Configuration = {
   devServer: {
     port: WEBPACK_PORT,
     open: IS_DEV,
-    openPage: `http://localhost:${SERVER_PORT}`
+    openPage: `http://localhost:${SERVER_PORT}`,
   },
   plugins,
   externals: {
-    'react': 'React',
+    react: 'React',
     'react-dom': 'ReactDOM',
   },
 };
